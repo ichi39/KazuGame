@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -9,13 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="game-container">
         <!-- Start Screen -->
         <div id="start-screen" class="screen active">
             <h1>ポケモン<br>タイプ相性クイズ</h1>
-            <p>きみの ちしきをためそう！</p>
-            <button id="start-btn" class="btn primary">ゲームスタート</button>
+            <p>モードをえらんでね</p>
+            <div class="start-buttons">
+                <button id="start-normal-btn" class="btn primary">ノーマル (かんたん)</button>
+                <button id="start-hard-btn" class="btn secondary">ハード (むずかしい)</button>
+            </div>
         </div>
 
         <!-- Quiz Screen -->
@@ -24,7 +29,7 @@
                 <span id="score-display">スコア: 0</span>
                 <span id="question-count">もんだい: 1/10</span>
             </div>
-            
+
             <div class="question-area">
                 <div class="opponent-type-display">
                     <p>あいてのタイプ</p>
@@ -36,7 +41,8 @@
             <div id="options-container" class="options-grid">
                 <!-- Options will be generated here -->
             </div>
-            
+
+            <button id="submit-btn" class="btn primary hidden" style="margin-top: 20px;">けってい！</button>
             <div id="feedback" class="feedback hidden"></div>
         </div>
 
@@ -51,4 +57,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
