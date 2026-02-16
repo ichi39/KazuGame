@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ポケモンタイプ相性クイズ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>ポケモン<br>タイプ相性クイズ</h1>
+            <p>きみの ちしきをためそう！</p>
+            <button id="start-btn" class="btn primary">ゲームスタート</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen hidden">
+            <div class="hud">
+                <span id="score-display">スコア: 0</span>
+                <span id="question-count">もんだい: 1/10</span>
+            </div>
+            
+            <div class="question-area">
+                <div class="opponent-type-display">
+                    <p>あいてのタイプ</p>
+                    <div id="target-type-icon" class="type-icon">?</div>
+                </div>
+                <h2 id="question-text">こうかは ばつぐん なのは？</h2>
+            </div>
+
+            <div id="options-container" class="options-grid">
+                <!-- Options will be generated here -->
+            </div>
+            
+            <div id="feedback" class="feedback hidden"></div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen hidden">
+            <h2>結果発表！</h2>
+            <p id="final-score">あなたのスコア: 0点</p>
+            <p id="result-message">目指せポケモンマスター！</p>
+            <button id="restart-btn" class="btn primary">もう一度遊ぶ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
